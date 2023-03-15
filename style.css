@@ -1,0 +1,123 @@
+body {
+  overflow-x: hidden;
+}
+
+.navbar-link.w--current .line--detector {
+  opacity: 1;
+}
+
+.project-item:nth-child(2n) {
+  top: 414em;
+}
+
+.your-yield-line-item {
+  white-space: nowrap;
+  will-change: transform;
+  animation: your-yield-line-item 2s linear infinite;
+  /* manipulate the speed of the marquee by changing "40s" line above*/
+}
+
+@keyframes your-yield-line-item {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+}
+.slick-slide,
+.slick-slide * {
+  outline: none !important;
+}
+
+.progress {
+  overflow: hidden;
+  background-image: linear-gradient(to right, black, black);
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+
+  transition: background-size 0.4s ease-in-out;
+}
+
+.rotatin-loop {
+  white-space: nowrap;
+  will-change: transform;
+  animation: rotatin-loop 20s linear infinite;
+  /* manipulate the speed of the marquee by changing "40s" line above*/
+}
+
+@keyframes rotatin-loop {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .project-item:nth-child(2n) {
+    top: 100em;
+  }
+  .project-item.is--2:nth-child(2n) {
+    top: 0em;
+  }
+}
+
+/* slider css*/
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 1px; /* Specified height */
+  background: transparent; /* Grey background */
+  outline: none; /* Remove outline */ /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 32em; /* Set a specific slider handle width */
+  height: 32em; /* Slider handle height */
+  border-radius: 10px;
+
+  background-image: url("https://uploads-ssl.webflow.com/61e7fea50c01611ba3f657fc/61fb88c48f3250c73d455de5_Group%20144.svg");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 32em; /* Set a specific slider handle width */
+  height: 32em; /* Slider handle height */
+  background: transparent; /* Green background */
+  opacity: 1;
+  cursor: pointer; /* Cursor on hover */
+}
+
+.splide__pagination {
+  opacity: 0;
+  position: absolute;
+}
+
+.splide__arrows {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
